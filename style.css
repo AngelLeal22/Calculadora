@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    background-color: rgb(87, 83, 83);
+    
+    /* display: grid convierte un elemento HTML en un contenedor de cuadrícula bidimensional, permitiendo organizar sus elementos hijos en filas y columnas */
+    display: grid;
+    place-items: center;
+}
+
+.calculadora{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    width: 400px;
+    max-width: 100%;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: .5rem;
+    box-shadow: 0 0 20px  rgba(43, 42, 42, 0.555)
+}  
+
+.pantalla{
+    grid-column: 1/5;
+    background-color: black;
+    color: aliceblue;
+    padding: 1.5rem;
+    font-size: 2rem;
+    text-align: right;
+    border-radius: .5rem;
+    margin-bottom: 1.5rem;
+   
+   
+
+}
+
+.btn{
+    background-color: rgb(61, 60, 58);
+    color:aliceblue;
+    border: 0;
+    padding: 1.5rem .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .5rem;
+    cursor: pointer;
+     font-weight: 400;
+}
+
+.btn:hover{
+    background-color: rgb(201, 98, 2);
+}
+
+
+
+#cero{
+    grid-column: span 2;
+}
+
+#igual{
+    grid-row:  span 2;
+    background-color: rgb(201, 98, 2);
+}
+
+#igual:hover{
+    background-color: rgb(66, 34, 4);
+}
